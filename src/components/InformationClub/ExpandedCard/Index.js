@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import {
     Animated,
     Dimensions,
@@ -15,7 +14,7 @@ import styles from './Styles'
 import house1 from '../../../assets/Images/Houses/House/house1.jpg'
 import house2 from '../../../assets/Images/Houses/House/house2.jpg'
 import house3 from '../../../assets/Images/Houses/House/house3.jpg'
-
+import InformationHouseExpanded from '../../InformationHouseExpanded/Index'
 
 
 const ELEMENT_HEIGHT = 200;
@@ -50,7 +49,7 @@ export default class ExpandedCard extends Component {
                         style={{
                             position: "absolute",
                             top: 40,
-                            right: 12,
+                            right: 7,
                             zIndex: 200,
 
                             color: '#FFF',
@@ -64,22 +63,25 @@ export default class ExpandedCard extends Component {
                 </TouchableWithoutFeedback>
 
                 <View style={styles.container}>
-                    <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ paddingHorizontal: 15, alignContent: "center" }}>
+                    <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ alignContent: "flex-start" }}>
 
 
-                        <Image source={house1} style={{ width: 300, height: "100%", marginHorizontal: 10, alignSelf: "center" }} />
-                        <Image source={house2} style={{ width: 300, height: "100%", marginHorizontal: 10, alignSelf: "center" }} />
-                        <Image source={house3} style={{ width: 300, height: "100%", marginHorizontal: 10, alignSelf: "center" }} />
+                        <Image source={house1} style={{ width: 380, height: "100%", }} />
+                        <Image source={house2} style={{ width: 380, height: "100%", }} />
+                        <Image source={house3} style={{ width: 380, height: "100%", }} />
 
 
                     </ScrollView>
+                    <InformationHouseExpanded 
+                    Adress={this.props.Adress} 
+                    Price={this.props.Price} 
+                    Meters={this.props.Meters}
+                    Bedrooms={this.props.Bedrooms}
+                    Vacancy={this.props.Vacancy}
+                    Bathroom={this.props.Bathrooms}
+                    />
 
-                    <Text style={styles.description}>
 
-                        Lindo sobrado, inteiro reformado
-                        Sala ampla em porcelanato, cozinha americana , lavabo, mais um cômodo nos fundos
-                        3 dormitórios com armários, sendo 1 suíte, com varanda, quintal e entrada lateral, área de serviço, vaga para 2 carros
-                    </Text>
                 </View>
 
 
