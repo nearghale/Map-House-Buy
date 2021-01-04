@@ -17,8 +17,7 @@ Esse projeto desenvolvido em React Native, pode servir como uma base para inicia
   <li>O usuário poderá ligar na casa</li>
   <li>O usuário poderá irá poder ver a rota de sua localização até a casa</li>
   <li>Ajustes de design e código</li>
-  <li>Modal estendido terá um melhor design</li>
 </ul>
 
 <br>
-<h3>Version 1.0 </h3>
+<h3>Version 1.1 </h3>
