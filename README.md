@@ -14,7 +14,7 @@ Esse projeto desenvolvido em React Native, pode servir como uma base para inicia
 <h2>Features futuras</h2>
 <ul>
   <li>O usuário poderá ver a rota até um marker ao clicar no botão Go no callout</li>
-  <li>O usuário poderá ligar na casa</li>
+  <li>O usuário poderá ligar para o dono da casa</li>
   <li>O usuário poderá irá poder ver a rota de sua localização até a casa</li>
   <li>Ajustes de design e código</li>
 </ul>
