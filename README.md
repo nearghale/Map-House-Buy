@@ -8,13 +8,14 @@ Esse projeto desenvolvido em React Native, pode servir como uma base para inicia
   <li>Marker e Callout Personalizado</li>
   <li>Mapa com estilo personalizado</li>
   <li>Informações adicionais no rodapé da localização do marker</li>
-  <li>Ao clicar no pequeno modal de informações do rodapé, um novo modal centralizado maior, irá aparecer com mais informações</li>
+  <li>Ao clicar no pequeno modal de informações do rodapé, um novo modal centralizado maior, surgirá com mais informações</li>
 </ul>
 
 <h2>Features futuras</h2>
 <ul>
   <li>O usuário poderá ver a rota até um marker ao clicar no botão Go no callout</li>
-  <li>O usuário poderá ligar no estabelecimento</li>
+  <li>O usuário poderá ligar na casa</li>
+  <li>O usuário poderá irá poder ver a rota de sua localização até a casa</li>
   <li>Ajustes de design e código</li>
   <li>Modal estendido terá um melhor design</li>
 </ul>
