@@ -22,11 +22,17 @@ export default function App() {
   const [imageHouse, setImageHouse] = useState('')
   const [openingHours, setOpeningHours] = useState('')
   const [adress, setAdress] = useState('')
+  const [price, setPrice] = useState('')
   const [minhaLocalizacao, setMinhaLocalizacao] = useState({})
   const [destination, setDestination] = useState(latitude = 42.3730591, longitude = -71.033754)
   const [yOffset, setYOffset] = useState(null)
   const [xOffset, setXOffset] = useState(null)
   const [selectedCard, setSelectedCard] = useState(null)
+  const [meters, setMeters] = useState(null)
+  const [vacancy, setVacancy] = useState(null)
+  const [bedrooms, setBedrooms] = useState(null)
+  const [bathrooms, setBathrooms] = useState(null)
+
 
   async function requestPermissions() {
     if (Platform.OS === 'ios') {
@@ -67,15 +73,20 @@ export default function App() {
   }, [])
 
 
-  function visibleInformation(titleHouse, OpeningHours, Adress, imageHouse) {
+  function visibleInformation(titleHouse, openingHours, adress, price, meters, bathrooms, bedrooms, vacancy, imageHouse) {
     setVisibleInformationHouse(visibleInformationHouse != '' ? '' : titleHouse)
     setTitleHouse(titleHouse)
-    setOpeningHours(OpeningHours)
-    setAdress(Adress)
+    setOpeningHours(openingHours)
+    setAdress(adress)
+    setPrice(price)
+    setMeters(meters)
+    setBathrooms(bathrooms)
+    setBedrooms(bedrooms)
+    setVacancy(vacancy)
     setImageHouse(imageHouse)
-
-  }
   
+  }
+
 
 
 
@@ -89,20 +100,28 @@ export default function App() {
       adress: "Rua Arca da aliança, 22 - Núcleo Lageado, São Paulo SP, 08440-565",
       latitude: -23.53110806941113,
       longitude: -46.410299770244364,
-      price: "R$ 124 mil entrada (R$72 mil)",
+      meters: 148,
+      bedrooms: 4,
+      vacancy: 3,
+      bathrooms: 2,
+      price: 124.155,
       image: require("../../assets/icons/house_basic.png"),
       clicked: false,
-      phone:  11983878747
+      phone: 11983878747
     },
     {
 
-      houseTitle: "Sobrado lindo a venda!",
+      houseTitle: "Apartamento a venda!",
       openingHours: "Segunda a sexta das 07h às 20h/ Domingo e feriado das 05h às 18h",
       adress: "Rua Sāo José de Mossamedes, 590 - Núcleo Lageado, São Paulo - SP, 08440-540",
       latitude: -23.523360501253322,
       longitude: -46.4126324243453,
-      price: "R$ 180 mil entrada (R$90 mil)",
-      image: require("../../assets/icons/house_basic.png"),
+      meters: 78,
+      bedrooms: 2,
+      vacancy: 1,
+      bathrooms: 1,
+      price: 180.255,
+      image: require("../../assets/icons/apartament.png"),
       clicked: false,
       phone: 11983878747
 
@@ -136,7 +155,15 @@ export default function App() {
             }}
             onPress={() => {
 
-              visibleInformation(House.houseTitle, House.openingHours, House.adress, House.image)
+              visibleInformation(House.houseTitle,
+                House.openingHours,
+                House.adress,
+                House.price,
+                House.meters,
+                House.bathrooms,
+                House.bedrooms,
+                House.vacancy,
+                House.image)
 
             }
             }
@@ -181,6 +208,11 @@ export default function App() {
           ImageHouse={imageHouse}
           OpeningHours={openingHours}
           Adress={adress}
+          Price={price}
+          Meters={meters}
+          Bedrooms={bedrooms}
+          Vacancy={vacancy}
+          Bathrooms={bathrooms}
           unselectCard={() =>
             setSelectedCard(null)
           }

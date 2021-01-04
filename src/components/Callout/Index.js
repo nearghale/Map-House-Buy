@@ -45,7 +45,7 @@ export default function Callout(props) {
             <View style={styles.subContainer}>
                 <View style={styles.containerText}>
                     <Text style={styles.title}>{props.Title}</Text>
-                    <Text style={styles.description}>{props.Description}</Text>
+                    <Text style={styles.description}>R$ {props.Description}</Text>
 
                 </View>
                 <View style={styles.containerButtons} >
